@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/2.DlLwNvc8.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.CANKuWpw.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.Bg3cgaLk.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.DXdI4JNT.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.Bg8SUMm2.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.B769MIA0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.C-0ahz64.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.BjJcT8Rr.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.CzSsIXbv.js"><title>svelte-metaballs</title><!-- HEAD_svelte-9d54gw_START --><!-- HEAD_svelte-9d54gw_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div>   <div class="page svelte-1vps29j"><div class="container svelte-1vps29j"> <div class="full-width svelte-6yeyrl"></div> <canvas class="svelte-6yeyrl"></canvas> <div class="content svelte-1vps29j"><div class="title svelte-1vps29j" data-svelte-h="svelte-1eqqx4i"><span class="innerTitle svelte-1vps29j">svelte-metaballs</span></div> <div class="mouse svelte-vqeczw" role="button" tabindex="0"></div> <div class="docs svelte-c6nuwf"><div class="doc svelte-c6nuwf"><div class="md"><h1 data-svelte-h="svelte-4p3d56">Welcome</h1> <p data-svelte-h="svelte-17jd4qt">Welcome to Svelte-Metaballs!</p> <p data-svelte-h="svelte-xq5wuk">Svelte-Metaballs is a small(-ish) Svelte-based (duh) Metaballs library that uses WebGL to render things.</p> </div> </div><div class="doc svelte-c6nuwf"><div class="md"><h2 data-svelte-h="svelte-136tnhu">Installation</h2> <p data-svelte-h="svelte-1j906hj">To install <a href="https://npm.im/svelte-metaballs" rel="nofollow">Svelte-Metaballs</a>, simply run:</p> <div data-group="packageManager" data-selection="" id="packageManager" class="mdsvex-tabs_tablist mdsvex-tabs tablist svelte-181uf89" role="tablist"> <div class="value svelte-181uf89 window"><div class="tabContent" data-tab-id="pnpm" data-tab-group="auto" data-preload-render><h3>pnpm</h3> <pre class="language-bash svelte-idrfod"><code class="hljs language-bash svelte-idrfod"><!-- HTML_TAG_START -->pnpm i svelte-metaballs<!-- HTML_TAG_END --></code></pre></div> <div class="tabContent" data-tab-id="Yarn" data-tab-group="auto" data-preload-render><h3>Yarn</h3> <pre class="language-bash svelte-idrfod"><code class="hljs language-bash svelte-idrfod"><!-- HTML_TAG_START -->yarn add svelte-metaballs<!-- HTML_TAG_END --></code></pre></div> <div class="tabContent" data-tab-id="npm" data-tab-group="auto" data-preload-render><h3>npm</h3> <pre class="language-bash svelte-idrfod"><code class="hljs language-bash svelte-idrfod"><!-- HTML_TAG_START -->npm i svelte-metaballs<!-- HTML_TAG_END --></code></pre></div></div> </div> </div> </div><div class="doc svelte-c6nuwf"><div class="md"><h2 data-svelte-h="svelte-dnbfhr">Usage</h2> <p data-svelte-h="svelte-1qv5618">Using <code>svelte-metaballs</code> is <em>very</em> simple. Simply import the component &amp; it will automatically size itself to it’s parent.</p> <p data-svelte-h="svelte-12i07iw">Notice: it will set the parent’s position to relative. If this is a problem, pass the <code>danger_noForceRelativePosition</code> property. This will cause a mismatch between the canvas’ actual size and the size it’s being rendered at, unless the size of the nearest <code>position: relative</code> ancestor is the same as the direct parent.</p> <h3 data-svelte-h="svelte-fg98mb">Syntax</h3> <h3 data-svelte-h="svelte-183jr9r">Examples</h3> <div data-group="mdsvex-tabs_tabgroup_0" data-selection="" id="mdsvex-tabs_tabgroup_0" class="mdsvex-tabs_tablist mdsvex-tabs tablist svelte-181uf89" role="tablist"> <div class="value svelte-181uf89 window"><div class="tabContent" data-tab-id="Fullscreen" data-tab-group="auto" data-preload-render><h3>Fullscreen</h3> Fullscreen usage is as simple as:
+    <pre class="language-auto svelte-idrfod"><code class="hljs language-auto svelte-idrfod"><!-- HTML_TAG_START -->&#x3C;script lang=<span class="hljs-string">"ts"</span>>
+  <span class="hljs-keyword">import</span> <span class="hljs-title class_">Metaballs</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'svelte-metaballs'</span>;
+&#x3C;/script>
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>></span>
+  <span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meatballs"</span>></span>
+    <span class="hljs-tag">&#x3C;<span class="hljs-name">Metaballs</span> /></span>
+  <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span>
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>></span>
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #1a1a1a;
+    .meatballs {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+  }
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">style</span>></span></span>
+<!-- HTML_TAG_END --></code></pre></div> <div class="tabContent" data-tab-id="Sized" data-tab-group="auto" data-preload-render><h3>Sized</h3> If you want to size the metaballs yourself, you can do so:
+    <pre class="language-auto svelte-idrfod"><code class="hljs language-auto svelte-idrfod"><!-- HTML_TAG_START -->&#x3C;script lang=<span class="hljs-string">"ts"</span>>
+  <span class="hljs-keyword">import</span> <span class="hljs-title class_">Metaballs</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'$lib/Metaballs.svelte'</span>;
+&#x3C;/script>
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>></span>
+  <span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meatballs"</span>></span>
+    <span class="hljs-tag">&#x3C;<span class="hljs-name">Metaballs</span> <span class="hljs-attr">numMetaballs</span>=<span class="hljs-string">"{10}"</span> /></span>
+    <span class="hljs-comment">&#x3C;!-- We set the metaball count to 10 as otherwise we just end up with a gradient at this tiny size --></span>
+  <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span>
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>></span>
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    .meatballs {
+      width: 400px;
+      height: 400px;
+      position: relative;
+    }
+  }
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">style</span>></span></span>
+<!-- HTML_TAG_END --></code></pre> <p data-svelte-h="svelte-1acf5gu">This ends up looking a bit like this (the background is the outer container/page):</p> <div class="container" style="background: #1a1a1a;width:100%;height:600px;overflow-x:auto;display:flex;justify-content: center;align-items: center;border-radius:0.5rem;"><div class="meatballs" style="width: 400px;height: 400px;position: relative;"> <div class="full-width svelte-6yeyrl"></div> <canvas class="svelte-6yeyrl"></canvas></div></div></div> <div class="tabContent" data-tab-id="Practical Example" data-tab-group="auto" data-preload-render><h3>Practical Example</h3> This very documentation page uses <code data-svelte-h="svelte-d118hf">svelte-metaballs</code> to render the metaballs in the background:
+    <pre class="language-auto svelte-idrfod"><code class="hljs language-auto svelte-idrfod"><!-- HTML_TAG_START -->&#x3C;script lang=<span class="hljs-string">"ts"</span>>
+  <span class="hljs-keyword">import</span> <span class="hljs-title class_">Metaballs</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'$lib/Metaballs.svelte'</span>;
+  <span class="hljs-keyword">import</span> <span class="hljs-title class_">ScrollableIndicator</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'$lib/util/ScrollableIndicator.svelte'</span>;
+  <span class="hljs-keyword">import</span> <span class="hljs-title class_">Docs</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'./Docs.svelte'</span>;
+&#x3C;/script>
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">svelte:head</span>></span>
+  <span class="hljs-tag">&#x3C;<span class="hljs-name">title</span>></span>svelte-metaballs<span class="hljs-tag">&#x3C;/<span class="hljs-name">title</span>></span>
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">svelte:head</span>></span></span>
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"page"</span>></span>
+  <span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>></span>
+    <span class="hljs-tag">&#x3C;<span class="hljs-name">Metaballs</span> /></span>
+    <span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span>></span><span class="hljs-tag">&#x3C;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"innerTitle"</span>></span>svelte-metaballs<span class="hljs-tag">&#x3C;/<span class="hljs-name">span</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">ScrollableIndicator</span> /></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">Docs</span> /></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"copy"</span>></span>
+        Copyright <span class="hljs-symbol">&#x26;copy;</span> 2024 Expo. Licensed under the MIT License.
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span>
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">style</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"scss"</span>></span>
+  .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background: #1a1a1a;
+    color: #dedede;
+    height: max-content;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      height: max-content;
+
+      font-family:
+        'Inter',
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 2;
+        position: relative;
+
+        .title {
+          font-size: 10vw;
+          font-weight: 900;
+          color: #fff;
+          min-height: 100vh;
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .innerTitle {
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 1rem 2rem;
+          }
+        }
+        .copy {
+          background: rgba(32, 32, 32, 0.5);
+          margin-bottom: 1rem;
+          border-radius: 16px;
+          backdrop-filter: blur(10px);
+          padding: 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">style</span>></span></span>
+<!-- HTML_TAG_END --></code></pre></div></div> </div> </div> </div><div class="doc svelte-c6nuwf"><div class="md"><h2 data-svelte-h="svelte-122alvm">TODO</h2> <p data-svelte-h="svelte-4y4msw">This section is mainly here for myself:</p> <ul data-svelte-h="svelte-1yt3cun"><li>Consider rewriting the metaballs to handle more or less the entire computation in the shader. This would allow near zero <code>CPU &lt;=&gt; GPU</code> Communication and would reduce general resource usage even further.</li> <li>Refactor the metaballs to be overall cleaner &amp; not just a single file with a bunch of code.</li> <li>Refactor to export a method that directly renders to a canvas &amp; exports a stop method.</li> <li>Document the <code>Metaballs</code> component’s arguments.</li> <li>Add some sliders to allow users to preview the metaballs’ arguments.</li></ul> </div> </div> </div> <div class="copy svelte-1vps29j" data-svelte-h="svelte-37jj9m">Copyright © 2024 Expo. Licensed under the MIT License.</div></div></div> </div> 
+			
+			<script>
+				{
+					__sveltekit_z8r9uc = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/svelte-metaballs"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.CANKuWpw.js"),
+						import("./_app/immutable/entry/app.B769MIA0.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
