@@ -1,0 +1,29 @@
+<script lang="ts">
+  import Metaballs from '$lib/Metaballs.svelte';
+</script>
+
+<div class="container">
+  <div class="meatballs">
+    <Metaballs numMetaballs="{10}" />
+    <!-- We set the metaball count to 10 as otherwise we just end up with a gradient at this tiny size -->
+  </div>
+</div>
+
+<style lang="scss">
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    .meatballs {
+      width: 400px;
+      height: 400px;
+      position: relative;
+    }
+  }
+</style>
